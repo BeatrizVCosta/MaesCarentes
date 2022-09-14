@@ -1,0 +1,45 @@
+{% extends 'maec/funcionario.html' %}
+{%block title%}Editar Perfil{% endblock %}
+{% block editar%}
+<div class="content-wrap">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 p-r-0 title-margin-right">
+                    <div class="page-header">
+                        <div class="page-title">                          
+                        </div>
+                    </div>
+                </div>   
+            </div>
+                <section id="main-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-title">
+                                    <h4>Editar perfil</h4>                                   
+                                </div>
+                                <div class="card-body">
+                                    <div class="basic-form">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Email </label>
+                                                <input type="email" class="form-control" placeholder="Email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Senha</label>
+                                                <input type="password" class="form-control" placeholder="Senha">
+                                            </div>
+                                            <button type="submit" class="btn btn-default">Salvar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

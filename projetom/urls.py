@@ -16,6 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from MaesCarentes.views import inicio, apoiador, funcionario, forms_evento, editar, tabela_m, tabela_p, forms_fun, forms_mae, login
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('inicio/', inicio),
+    path('apoiador/', apoiador),
+    path('funcionario/', funcionario),
+    path('cadastrar_evento/', forms_evento),
+    path('funcionario/editar/', editar),
+    path('ver_maes/', tabela_m),
+    path('produtos_disponiveis/', tabela_p),
+    path('cadastrar_funcionario/', forms_fun),
+    path('cadastrar_mae/', forms_mae),
+    path('login/', login),
+    
+
 ]

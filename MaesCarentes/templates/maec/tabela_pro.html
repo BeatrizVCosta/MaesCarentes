@@ -1,0 +1,67 @@
+{% extends 'maec/funcionario.html' %}
+{%block title%}Produtos Disponíveis{% endblock %}
+{% block titulo%}Produtos Disponíveis{% endblock%}
+{% block tabela_produtos %} 
+<div class="content-wrap">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 p-r-0 title-margin-right">
+                    <div class="page-header">  
+                    </div>
+                </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                              <h4 class="card-title">Produtos Disponíveis</h4>
+                            </div>
+                              <div class="card-body">
+                                <div class="table table-hover">
+                                   <table class="table table-bordered verticle-middle table-responsive-sm">
+                                    <thead>
+                                            <tr>
+                                                <th>Produto</th> 
+                                                <th>Estado</th>                                
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Boneca</td>
+                                            <td>usado</td>
+                                            <td>
+                                                <span>
+                                                    <a href="javascript:void()" class="mr-4" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                        <i class="fa fa-pencil color-muted"></i>
+                                                    </a>
+                                                    <a href="javascript:void()" class="mr-4" data-toggle="tooltip" data-placement="top" title="Close">
+                                                        <i class="fa fa-close color-danger"></i>
+                                                    </a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Roupa</td>
+                                            <td>novo</td>
+                                            <td>
+                                                <span>
+                                                    <a href="javascript:void()" class="mr-4" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                        <i class="fa fa-pencil color-muted"></i>
+                                                    </a>
+                                                    <a href="javascript:void()" class="mr-4" data-toggle="tooltip" data-placement="top" title="Close">
+                                                        <i class="fa fa-close color-danger"></i>
+                                                    </a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                     </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
