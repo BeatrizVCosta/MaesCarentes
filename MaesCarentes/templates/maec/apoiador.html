@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>  {% block title %}Apoiador{% endblock %}</title>
-    <link rel="shortcut icon" href="{%static 'template1/images/mini_logo.png' %}">
+    <link rel="shortcut icon" href="{%static 'template1/images/logo/mini_logo.png' %}">
     <!-- Retina iPad Touch Icon-->
     <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
     <!-- Retina iPhone Touch Icon-->
@@ -29,13 +29,13 @@
     <link href="{% static 'template1/css/lib/helper.css' %}" rel="stylesheet">
     <link href="{% static 'template1/css/style.css' %}" rel="stylesheet">
 </head>
-<body>
+<body> 
     <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
         <div class="nano">
             <div class="nano-content">
                 <ul>
                     <div class="logo"><a href="#">
-                    <img src="{%static 'template1/images/logo.png' %}" alt="" /><span>Mães Carentes</span></a></div>
+                    <img class="logo" src="{%static 'template1/images/logo/logo.png' %}" alt="" /><span>Mães Carentes</span></a></div>
                     <li><a href="{% url 'url_editar_ap' %}"><i ></i> Editar Perfil </a></li>
                     <li><a href="{% url 'url_doar' %}"><i ></i> Doar Dinheiro </a></li>
                     <li><a href="{% url 'url_doar_produto' %}"><i ></i> Doar Produtos</a></li>
@@ -66,6 +66,10 @@
       {% block editar%} {% endblock %}
       {% block doar %} {% endblock %}
       {% block doar_produto %} {% endblock %}
+      {% block cartao %} {% endblock %}
+      {% block pix %} {% endblock %}
+      {% block conta %} {% endblock %}
+      {% block boleto %} {% endblock %}
 
      <!-- jquery vendor -->
      <script src="{% static 'js/lib/jquery.min.js' %}"></script>

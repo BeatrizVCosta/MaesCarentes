@@ -31,9 +31,13 @@ urlpatterns = [
     path('cadastrar_funcionario/', forms_fun, name="url_cadastrar_funcionario"),
     path('cadastrar_mae/', forms_mae, name="url_cadastrar_mae"),
     path('login/', login, name="url_login"),
-      path('cadastre_se/', cadastre_se, name="url_cadastre_se"),
+    path('cadastre_se/', cadastre_se, name="url_cadastre_se"),
     path('editar_ap/', editar_ap, name="url_editar_ap"),
     path('doar_produto/', forms_pro, name="url_doar_produto"),
     path('doar/', doar, name="url_doar"),
+    path('pix/', pix, name="url_pix"),
+    path('boleto/', boleto, name="url_boleto"),
+    path('cartao/', cartao, name="url_cartao"),
+    path('conta/', conta, name="url_conta"),
 
 ]

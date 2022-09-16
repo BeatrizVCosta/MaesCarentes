@@ -11,6 +11,14 @@ def forms_pro(request):
     return render(request, "maec/forms_pro.html")
 def doar(request):
     return render(request, "maec/doar.html")
+def pix(request):
+    return render(request, "maec/pix.html")
+def boleto(request):
+    return render(request, "maec/boleto.html")
+def cartao(request):
+    return render(request, "maec/cartao.html")
+def conta(request):
+    return render(request, "maec/conta.html")
 def funcionario(request):
     return render(request, "maec/funcionario.html")
 def forms_evento(request):

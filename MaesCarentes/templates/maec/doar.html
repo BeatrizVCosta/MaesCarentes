@@ -1,4 +1,53 @@
 {% extends 'maec/apoiador.html' %}
 {%block title%}Doar{% endblock %}
 {% block doar %}
+{% load static%}
+<div class="content-wrap">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 p-r-0 title-margin-right">
+                    <div class="page-header">
+                        <div class="page-title">                          
+                        </div>
+                    </div>
+                </div>   
+            </div>
+                <section id="main-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="text-center mb-4">
+                                    <h4>Doar</h4>                                   
+                                </div>
+                                <div class="card-body">
+                                    <div class="basic-dropdown">
+                                        <div class="dropdown show">
+                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                                Selecionar Doação
+                                            </button>
+                                            <div class="dropdown-menu show" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 35px, 0px);">
+                                                <a class="dropdown-item" href="{% url 'url_pix' %}">Pix</a>
+                                                <a class="dropdown-item" href="{% url 'url_boleto' %}">Boleto</a>
+                                                <a class="dropdown-item" href="{% url 'url_cartao' %}">Cartão</a>
+                                                <a class="dropdown-item" href="{% url 'url_conta' %}">Conta para depósito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </div>
+    </div>
+</div> 
+<script src="{% static 'template1/js/lib/jquery.min.js' %}"></script>
+<script src="{% static 'template1/js/lib/jquery.nanoscroller.min.js' %}"></script>
+<!-- nano scroller -->
+<script src="{% static 'template1/js/lib/menubar/sidebar.js' %}"></script>
+<script src="{% static 'template1/js/lib/preloader/pace.min.js' %}"></script>
+<script src="{% static 'template1/js/lib/bootstrap.min.js' %}"></script><script src="js/scripts.js"></script>
 {% endblock %}
