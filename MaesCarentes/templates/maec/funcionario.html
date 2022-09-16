@@ -1,5 +1,5 @@
-{% load static %}
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>  {% block title %}Funcionário{% endblock %}</title>
-    <link rel="shortcut icon" href="{%static 'images/mini_logo.png'% }">
+    <link rel="shortcut icon" href="{%static 'template1//images/mini_logo.png' %}">
     <!-- Retina iPad Touch Icon-->
     <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
     <!-- Retina iPhone Touch Icon-->
@@ -16,21 +16,21 @@
     <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
     <!-- Standard iPhone Touch Icon-->
     <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
-    <!-- Styles -->
-    <link href="{% static 'css/lib/calendar2/pignose.calendar.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/lib/chartist/chartist.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/lib/font-awesome.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/lib/themify-icons.css' %}" rel="stylesheet">
-    <link href="{% static 'css/lib/owl.carousel.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/lib/owl.theme.default.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/lib/weather-icons.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/lib/menubar/sidebar.css' %}" rel="stylesheet">
-    <link href="{% static 'css/lib/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/lib/helper.css' %}" rel="stylesheet">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- Styles -->{% load static %}
+    <link href="{% static 'template1/css/lib/calendar2/pignose.calendar.min.css' %}" rel="stylesheet">
+    <link href="{% static 'template1/css/lib/chartist/chartist.min.css' %}" rel="stylesheet">
+    <link href="{% static 'template1/css/lib/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'template1/css/lib/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'template1/css/lib/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'template1/css/lib/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'template1/css/lib/weather-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'template1/css/lib/menubar/sidebar.css' %}" rel="stylesheet">
+    <link href="{% static 'template1/css/lib/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'template1/css/lib/helper.css' %}" rel="stylesheet">
+    <link href="{% static 'template1/css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-    <!--<div class="nav-header">
+    <!-- <div class="nav-header">
         <a href="#" class="brand-logo">
             <img class="logo-abbr" src="{%static 'images/logo.png' %}" alt="">
             <img class="logo-compact" src="{%static 'images/logo-text.png' %}" alt="">
@@ -59,16 +59,17 @@
     <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
         <div class="nano">
             <div class="nano-content">
+               
                 <ul>
-                    <div class="logo span"><a href="#">
-                    <img src="{%static 'images/logo.png' %}" alt="" /><span>Mãe</span></a></div>
-                    <li><a href="editar/"><i ></i> Editar Perfil </a></li>
-                    <li><a href="ver_maes/"><i ></i> Ver Mães </a></li>
-                    <li><a href="produtos_disponiveis/"><i ></i> Produtos Disponíveis</a></li>
-                    <li><a href="cadastrar_mae/"><i ></i> Cadastrar Mãe</a></li>
-                    <li><a href="cadastrar_evento/"><i ></i> Cadastrar Evento</a></li>
-                    <li><a href="cadastrar_funcionario/"><i ></i> Cadastrar Funcionário</a></li>
-                    <li><a><i ></i> Sair</a></li>
+                    <div class="logo "><a href="{% url 'url_funcionario' %}">
+                    <img src="{%static 'template1/images/logo.png' %}" alt="" /><span></span></a></div>
+                    <li><a href="{% url 'url_editar' %}"><i ></i> Editar Perfil </a></li>
+                    <li><a href="{% url 'url_ver_maes' %}"><i ></i> Ver Mães </a></li>
+                    <li><a href="{% url 'url_produtos_disponiveis' %}"><i ></i> Produtos Disponíveis</a></li>
+                    <li><a href="{% url 'url_cadastrar_mae' %}"><i ></i> Cadastrar Mãe</a></li>
+                    <li><a href="{% url 'url_cadastrar_evento' %}"><i ></i> Cadastrar Evento</a></li>
+                    <li><a href="{% url 'url_cadastrar_funcionario' %}"><i ></i> Cadastrar Funcionário</a></li>
+                    <li><a href="{% url 'url_inicio' %}"><i ></i> Sair</a></li>
                 </ul>
             </div>
         </div>

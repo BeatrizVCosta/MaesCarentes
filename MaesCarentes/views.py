@@ -5,6 +5,12 @@ def inicio(request):
     return render(request, "maec/index.html")
 def apoiador(request):
     return render(request, "maec/apoiador.html")
+def editar_ap(request):
+    return render(request, "maec/editar_ap.html")
+def forms_pro(request):
+    return render(request, "maec/forms_pro.html")
+def doar(request):
+    return render(request, "maec/doar.html")
 def funcionario(request):
     return render(request, "maec/funcionario.html")
 def forms_evento(request):
@@ -21,3 +27,5 @@ def forms_mae(request):
     return render(request, "maec/forms_mae.html")
 def login(request):
     return render(request, "maec/login.html")
+def cadastre_se(request):
+    return render(request, "maec/cadastre_se.html")

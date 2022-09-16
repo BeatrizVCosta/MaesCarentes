@@ -1,6 +1,6 @@
-{% extends 'maec/funcionario.html' %}
-{%block title%}Editar Perfil{% endblock %}
-{% block editar%}
+{% extends 'maec/apoiador.html' %}
+{%block title%}Doar Produto{% endblock %}
+{% block doar_produto %} 
 <div class="content-wrap">
     <div class="main">
         <div class="container-fluid">
@@ -17,20 +17,23 @@
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="text-center mb-4">
-                                    <h4>Editar perfil</h4>                                   
+                                    <h4>Doar Produto</h4>                                   
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-form">
                                         <form>
                                             <div class="form-group">
-                                                <label>Email </label>
-                                                <input type="email" class="form-control" placeholder="Email">
+                                                <label>Produto</label>
+                                                <input type="text" class="form-control" placeholder="Digite aqui">
                                             </div>
-                                            <div class="form-group">
-                                                <label>Senha</label>
-                                                <input type="password" class="form-control" placeholder="Senha">
+                                            <div class="form-group">  <label>Estado do produto</label>
+                                                <select class="form-control">
+                                                    <option>Novo</option>
+                                                    <option>Usado</option>
+                                                </select>
                                             </div>
-                                            <button type="submit" class="btn btn-default">Salvar</button>
+                                            
+                                            <button type="submit" class="btn btn-default btn-block">Salvar</button>
                                         </form>
                                     </div>
                                 </div>
@@ -41,5 +44,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
