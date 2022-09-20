@@ -33,6 +33,8 @@ def forms_fun(request):
     return render(request, "maec/forms_fun.html")
 def forms_mae(request):
     return render(request, "maec/forms_mae.html")
+def eventos(request):
+    return render(request, "maec/eventos.html")
 def login(request):
     return render(request, "maec/login.html")
 def cadastre_se(request):
