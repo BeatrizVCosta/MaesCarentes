@@ -24,14 +24,17 @@
             <div class="container">       
                 <div class="collapse navbar-collapse" >
                     <ul class="navbar-nav ms-auto">  
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre nós</a></li>                    
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'url_login' %}" id="login" >Login</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#home">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre nós</a></li>                                     
+                        <li class="nav-item mx-0 mx-lg-1" data-bs-toggle="modal" style="cursor: pointer;"data-bs-target="#portfolioModal1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded"> login</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead  text-white text-center" style="background-color: #DDB4CA;" >
+        <header class="masthead  text-white text-center" id="home" style="background-color: #DDB4CA;" >
                 <h1 class="masthead-heading text-uppercase mb-0">Mães Carentes</h1>
                 <!-- Masthead Avatar Image-->
                 <img  src="{% static 'template2/assets/img/logo_grande.png' %}" alt="..." />
@@ -54,12 +57,12 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div><p class="lead">O projeto Mães Carentes tem como objetivo ajudar mães que se encontram em situações de precarização financeira, nesse projeto se tem uma ONG fictícia de mesmo nome, a qual irá cadastrar essas mães carentes no site, por meio de uma plataforma em que os colaboradores da ONG possam as cadastrar e receber doações monetárias ou físicas de apoiadores virtuais, os quais poderão fazer o seu próprio cadastro e adicionar vagas de emprego, para as mães também será possível que elas se candidatem a alguma vaga de emprego disponível no site. A plataforma do site será composto por uma tela para que algum colaborador da ONG possa cadastrar a mãe, e ao cadastrar se cria o perfil dela e ao digitar suas informações pessoais também é criado um currículo, nesse perfil o responsável pela mãe poderá ver se ela recebeu alguma doação, o qual será entregue no estabelecimento da ONG e algum dos participantes da ONG irão levar - lós até a mãe, ou oferta de emprego, e esse perfil ficará visível para os seus doadores/apoiadores caso queiram ajuda-las financeiramente e/ou contrata-las.<p></div>
+                    <div><p class="lead">O projeto Mães Carentes tem como objetivo ajudar mães que se encontram em situações de precarização financeira, nesse projeto se tem uma ONG fictícia de mesmo nome, a qual irá cadastrar essas mães carentes no site, por meio de uma plataforma em que os funcionários da ONG possam as cadastrar e receber doações monetárias ou físicas de apoiadores virtuais, os quais poderão fazer o seu próprio cadastro. A plataforma do site será composto por uma tela para os apoiadores se cadastrarem, assim é criado o seu perfil, onde podem colocar suas informações bancárias, como quanto dinheiro vão doar, ou enviar produtos para a ONG, terá uma tela de login que servirá tanto para os funcionários ( os quais cadastraram outros funcionários em sua tela, cadastraram as mães lá também e monitorarão seus perfis, acrescentando eventos que ocorreram em suas vidas entre outros, também terão acesso aos produtos que foram doados e o dinheiro doado, e em seguida administram para qual mãe irão enviar os itens) quanto os apoiadores.</p></div>
                   
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="{% url 'url_cadastre_se' %}">                       
+                    <a class="btn btn-xl btn-outline-light" class="nav-item mx-0 mx-lg-1" class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">                       
                         Seja um apoiador
                     </a>  
                 </div>
@@ -70,150 +73,102 @@
         <div class="copyright py-4 text-center text-white" style="background-color: #293079;">
             <div class="container"><small>Copyright &copy; Mães Carentes 2022</small></div>
         </div>
-
-        
-        <div id="modal-login" class="modal-container">
-            <div class="modal">
-                <button class="fechar">x</button>
-                <h3 class="masthead-heading text-uppercase mb-0"> Login </h3>
-
-                <form action="{% url 'url_login' %}">
-                    <input type="email" class="input" placeholder="email">
-                    <input type="password" class="input" placeholder="senha">
-                    <input type="button" class="button" value="entrar" >
-                </form>
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Login</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Text-->
+                                <form action="{% url 'url_apoiador' %}">
+                                    <div class="form-group">
+                                        <label><strong>Email:</strong></label>
+                                        <input type="email" class="form-control" value="hello@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label><strong>Senha:</strong></label>
+                                        <input type="password" class="form-control" value="Password">
+                                    </div>
+                                    <div class="form-row d-flex justify-content-between mt-4 mb-2">
+                                        <div class="form-group">
+                                            <div class="form-check ml-2">
+                                                <input class="form-check-input" type="checkbox" id="basic_checkbox_1">
+                                                <label class="form-check-label" for="basic_checkbox_1">lembre-se</label>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" style="background-color: #DDB4CA;" class="btn btn-primary btn-block">Entrar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-        <!-- <style>
-            .input{
-                font-family:"PT Mono",monospace;
-                font-size:1.125em;
-                line-height:1.66667em;
-                color:#2a2426;
-                width:100%;
-                padding:0 5px;
-                height:40px;
-                border:2px solid #DDB4CA;
-                background:transparent;
-                margin-bottom:1em
-            }
-            .input:hover,.input:focus{
-                outline:none;
-                border-color:#DDB4CA
-            }
-            input.button{
-                font-family:"PT Mono",monospace;
-                font-size:1.125em;
-                line-height:1.66667em;
-                cursor:pointer;
-                color:#DDB4CA;
-                text-transform:uppercase;
-                border:2px solid #DDB4CA;
-                background:transparent;
-                display:block;
-                width:200px;
-                padding-top:5px;
-                -webkit-box-shadow:5px 5px 0 -2px #cbc6b9,5px 5px 0 0 #DDB4CA;
-                -moz-box-shadow:5px 5px 0 -2px #cbc6b9,5px 5px 0 0 #DDB4CA;
-                box-shadow:5px 5px 0 -2px #cbc6b9,5px 5px 0 0 #DDB4CA;
-                 transition:.3s
-            }
-            input.button:hover{
-                -webkit-box-shadow:3px 3px 0 -2px #cbc6b9,3px 3px 0 0 #DDB4CA;
-                -moz-box-shadow:3px 3px 0 -2px #cbc6b9,3px 3px 0 0 #DDB4CA;
-                box-shadow:3px 3px 0 -2px #cbc6b9,3px 3px 0 0 #DDB4CA}
-            .modal-container{
-                width: 100vw;
-                height: 100vh;
-                background: rgba(0, 0, 0, .5);
-                position: fixed;
-                top: 0px;
-                left: 0px;
-                z-index: 2000;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .modal{
-                background: white;
-                width: 60%;
-                min-width: 300px;
-                padding: 40px;
-                border: 10px solid #293079;
-                box-shadow: 0 0 0 10px white;
-                position: relative;
-
-            }
-            @keyframes modal {
-			from {
-				opacity: 0;
-				transform: translate3d(0, -60px, 0);
-			}
-			to {
-				opacity: 1;
-				transform: translate3d(0, 0, 0);
-			}
-		}
-
-		.mostrar .modal {
-			animation: modal .3s;
-		}
-
-		.fechar {
-			position: absolute;
-			font-size: 1.2em;
-			top: -30px;
-			right: -30px;
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			border: 4px solid white;
-			background: #DDB4CA;
-			color: white;
-			font-family: "PT Mono", monospace;
-			cursor: pointer;
-			box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
-		}
-        </style>
-
-        <script>
-	
-            function iniciaModal(modalID) {
-                if(localStorage.fechaModal !== modalID) {
-                    const modal = document.getElementById(modalID);
-                    if(modal) {
-                        modal.classList.add('mostrar');
-                        modal.addEventListener('click', (e) => {
-                            if(e.target.id == modalID || e.target.className == 'fechar') {
-                                modal.classList.remove('mostrar');
-                                localStorage.fechaModal = modalID;
-                            }
-                        });
-                    }
-                }
-            }
-    
-            const login = document.querySelector('#login');
-            login.addEventListener('click', () => iniciaModal('modal-login'));
-    
-            // document.addEventListener('scroll', () => {
-            //     if(window.pageYOffset > 800) {
-            //         iniciaModal('modal-login')
-            //     }
-            // })
-    
-        </script> -->
-
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cadastre-se</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Text-->
+                                <form action="{% url 'url_apoiador' %}">
+                                    <div class="form-group">
+                                        <label><strong>Nome Completo:</strong></label>
+                                        <input type="text" class="form-control" placeholder="Digite aqui">
+                                    </div>
+                                    <div class="form-group">
+                                        <label><strong>Email:</strong></label>
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label><strong>Senha:</strong></label>
+                                        <input type="password" class="form-control" placeholder="Senha">
+                                    </div>
+                                    <div class="new-account mt-3">
+                                        <button type="submit" style="background-color: #DDB4CA;"class="btn btn-primary m-b-30 m-t-30">Cadastrar</button>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         <!-- Bootstrap core JS-->
-        <script src="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="{% static 'template2/js/scripts.js' %}"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="{% static 'https://cdn.startbootstrap.com/sb-forms-latest.js' %}"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

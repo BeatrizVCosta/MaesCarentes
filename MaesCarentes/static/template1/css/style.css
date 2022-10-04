@@ -544,28 +544,28 @@ a.dt-button.active:not(.disabled) {
   color: #252525;
 }
 .btn-default {
-  background: #878787;
-  border-color: #878787;
+  background: #DDB4CA;
+  border-color: #DDB4CA;
   color: #ffffff;
 }
 .btn-default.active,
 .btn-default:focus,
 .btn-default:hover {
-  background: #6e6e6e;
-  border-color: #878787;
+  background: #cd9ab5;
+  border-color: #DDB4CA;
   color: #ffffff;
   box-shadow: none;
 }
 .btn-primary {
-  background: #5873fe;
-  border-color: #5873fe;
+  background: #DDB4CA ;
+  border-color: #DDB4CA;
   color: #ffffff;
 }
 .btn-primary.active,
 .btn-primary:focus,
 .btn-primary:hover {
-  background: #2549fe;
-  border-color: #5873fe;
+  background: #cd9ab5;
+  border-color: #DDB4CA;
   color: #ffffff;
   box-shadow: none;
 }
@@ -622,15 +622,15 @@ a.dt-button.active:not(.disabled) {
   box-shadow: none;
 }
 .btn-pink {
-  background: #e6a1f2;
+  background: #cd9ab5;
   border-color: #e6a1f2;
   color: #ffffff;
 }
 .btn-pink.active,
 .btn-pink:focus,
 .btn-pink:hover {
-  background: #da74ec;
-  border-color: #e6a1f2;
+  background: #cd9ab5;
+  border-color: #DDB4CA;
   color: #ffffff;
   box-shadow: none;
 }
@@ -1939,10 +1939,10 @@ footer p {
   border-radius: 100px;
 }
 .input-focus {
-  border-color: #5873fe;
+  border-color:#DDB4CA ;
 }
 .input-focus:focus {
-  border-color: #5873fe;
+  border-color: #DDB4CA ;
 }
 /*    Search Box Input Button
 --------------------------------*/
@@ -2187,7 +2187,7 @@ a.mail-dropdown {
   box-shadow: none;
 }
 .btn-compose {
-  background: #5873fe;
+  background: #DDB4CA ;
   color: #ffffff;
   padding: 12px 0;
   text-align: center;
@@ -2196,7 +2196,7 @@ a.mail-dropdown {
 .btn-compose:hover,
 .btn-compose:focus,
 .btn-compose.active {
-  background: #5873fe;
+  background: #DDB4CA ;
   color: #ffffff;
 }
 ul.inbox-nav {

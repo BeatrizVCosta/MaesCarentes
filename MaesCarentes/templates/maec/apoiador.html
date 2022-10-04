@@ -32,9 +32,9 @@
 <body> 
     <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures" >
         <div class="nano">
-            <div class="nano-content">
+            <div class="nano-content" >
                 <ul>
-                    <div class="logo"><a href="#">
+                    <div class="logo"><a href="{% url 'url_apoiador' %}">
                     <img class="logo" src="{%static 'template1/images/logo/logo.png' %}" alt="" /><span>Mães Carentes</span></a></div>
                     <li><a href="{% url 'url_editar_ap' %}"><i ></i> Editar Perfil </a></li>
                     <li><a href="{% url 'url_doar' %}"><i ></i> Doar Dinheiro </a></li>
@@ -43,9 +43,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="nav-header">
-        <div class="nav-control"></div>
     </div>
     <div class="header">
         <div class="container-fluid">
@@ -63,13 +60,11 @@
             </div>
         </div>
     </div>
-      {% block editar%} {% endblock %}
-      {% block doar %} {% endblock %}
-      {% block doar_produto %} {% endblock %}
-      {% block cartao %} {% endblock %}
-      {% block pix %} {% endblock %}
-      {% block conta %} {% endblock %}
-      {% block boleto %} {% endblock %}
+      {% block conteudo%} 
+      
+      {% endblock %}
+
+    
 
      <!-- jquery vendor -->
      <script src="{% static 'js/lib/jquery.min.js' %}"></script>
