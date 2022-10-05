@@ -1927,7 +1927,7 @@ footer p {
 .form-control:focus,
 .form-control.active {
   box-shadow: none;
-  border-color: #878787;
+  border-color: #cd9ab5;
 }
 .input-default {
   border-radius: 4px;

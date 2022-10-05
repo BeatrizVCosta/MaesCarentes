@@ -2219,7 +2219,7 @@ progress {
   background-color: #fff;
   border-color: #DDB4CA;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem #86007D;
+  box-shadow: 0 0 0 0.25rem #cd9ab5;
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -2434,7 +2434,7 @@ textarea.form-control-lg {
 .form-select:focus {
   border-color: #DDB4CA;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem #86007D;
+  box-shadow: 0 0 0 0.25rem #cd9ab5;
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
@@ -2503,7 +2503,7 @@ textarea.form-control-lg {
 .form-check-input:focus {
   border-color: #DDB4CA;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem #86007D;
+  box-shadow: 0 0 0 0.25rem #cd9ab5;
 }
 .form-check-input:checked {
   background-color: #cd9ab5;
