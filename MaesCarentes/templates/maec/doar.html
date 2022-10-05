@@ -29,7 +29,6 @@
                                             <div class="dropdown-menu show" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 35px, 0px);">
                                                 <a class="dropdown-item" href="{% url 'url_pix' %}">Pix</a>
                                                 <a class="dropdown-item" href="{% url 'url_boleto' %}">Boleto</a>
-                                                <a class="dropdown-item" href="{% url 'url_cartao' %}">Cartão</a>
                                                 <a class="dropdown-item" href="{% url 'url_conta' %}">Conta para depósito</a>
                                             </div>
                                         </div>
@@ -44,6 +43,9 @@
         </div>
     </div>
 </div> 
+{% block doar %}
+{% endblock%}
+
 <script src="{% static 'template1/js/lib/jquery.min.js' %}"></script>
 <script src="{% static 'template1/js/lib/jquery.nanoscroller.min.js' %}"></script>
 <!-- nano scroller -->
