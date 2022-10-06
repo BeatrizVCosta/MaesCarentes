@@ -72,7 +72,7 @@
 
 .sidebar .nano-content>ul li>ul {
     display: none;
-    background: rgba(52,57,87,0.2)!important;
+    background: #cd9ab5!important;
 }
 
 .sidebar .nano-content>ul li.open>ul {
@@ -146,7 +146,7 @@ html.rtl .sidebar .nano-content>ul>li.label, html.rtl .sidebar .nano-content>ul>
 }
 
 .sidebar .nano-content>ul>li.active>a, .sidebar .nano-content>ul>li.open>a, .sidebar .nano-content>ul>li>ul {
-    background: linear-gradient(to right, #5772FE , #6D85FB);
+    background: linear-gradient(to right, #cd9ab5 , #DDB4CA);
 }
 
 .sidebar .nano-content>ul>li>ul>li.label, .sidebar .nano-content>ul>li>ul>li.content, .sidebar .nano-content>ul>li>ul>li>a {
@@ -160,7 +160,7 @@ html.rtl .sidebar .nano-content>ul>li>ul>li.label, html.rtl .sidebar .nano-conte
 }
 
 .sidebar .nano-content>ul>li>ul>li.active>a, .sidebar .nano-content>ul>li>ul>li.open>a, .sidebar .nano-content>ul>li>ul>li>ul {
-    background: #242634;
+    background: #DDB4CA;
 }
 
 .sidebar .nano-content>ul>li>ul>li>ul>li.label, .sidebar .nano-content>ul>li>ul>li>ul>li.content, .sidebar .nano-content>ul>li>ul>li>ul>li>a {
@@ -174,7 +174,7 @@ html.rtl .sidebar .nano-content>ul>li>ul>li>ul>li.label, html.rtl .sidebar .nano
 }
 
 .sidebar .nano-content>ul>li>ul>li>ul>li.active>a, .sidebar .nano-content>ul>li>ul>li>ul>li.open>a, .sidebar .nano-content>ul>li>ul>li>ul>li>ul {
-    background: #1c1d28;
+    background: #DDB4CA;
 }
 
 .sidebar .nano-content>ul>li>ul>li>ul>li>ul>li.label, .sidebar .nano-content>ul>li>ul>li>ul>li>ul>li.content, .sidebar .nano-content>ul>li>ul>li>ul>li>ul>li>a {

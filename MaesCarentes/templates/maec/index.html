@@ -16,6 +16,9 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'template2/css/styles.css' %}" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
     </head>
    
     <body id="page-top">
@@ -139,7 +142,11 @@
                                 <form action="{% url 'url_apoiador' %}">
                                     <div class="form-group">
                                         <label><strong>Nome Completo:</strong></label>
-                                        <input type="text" class="form-control" placeholder="Digite aqui">
+                                        <input type="text" class="form-control" placeholder="Nome Completo">
+                                    </div>
+                                    <div class="form-group">
+                                        <label><strong>Username:</strong></label>
+                                        <input type="text" class="form-control" placeholder="@username">
                                     </div>
                                     <div class="form-group">
                                         <label><strong>Email:</strong></label>

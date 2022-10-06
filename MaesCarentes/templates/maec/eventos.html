@@ -9,10 +9,10 @@
                     <div class="page-header">  
                     </div>
                 </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-8">
                         <div class="card">
                             <div class="card-header">
-                              <h4 class="card-title">#nome da Mãe</h4>
+                              <h4 style="font-family: 'Mogra', cursive;" class="card-title">#Nome da Mãe</h4>
                             </div>
                               <div class="card-body">
                                 <div class="table table-hover">
@@ -20,6 +20,8 @@
                                     <thead>
                                             <tr> 
                                                 <th>Doações</th> 
+                                                 
+                                                <th>Responsável</th> 
                                                                                      
                                                 <th></th>
                                             </tr>
@@ -28,6 +30,11 @@
                                         <tr><td>
                                                 <span>
                                                     <a>Doação</a>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    <a >Fulano</a>
                                                 </span>
                                             </td>
                                 
@@ -50,6 +57,11 @@
                                             </td>
                                             <td>
                                                 <span>
+                                                    <a >Fulano</a>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span>
                                                     <a href="javascript:void()" class="mr-4" data-toggle="tooltip" data-placement="top" title="Edit">
                                                         <i class="fa fa-pencil color-muted"></i>
                                                     </a>
@@ -62,8 +74,10 @@
                                      </tbody>
                                 </table>
                             </div>
-                            <form action="{% url 'url_cadastrar_evento' %}"> <button type="submit" class="btn btn-pink btn-block">Adicionar</button>
+                            <div>
+                            <form action="{% url 'url_cadastrar_evento' %}"> <button type="submit" class="btn btn-pink btn-block btn-rounded">Adicionar</button>
                             </form>
+                        </div>
                         </div>
                     </div>
                 </div>

@@ -15,8 +15,8 @@ def pix(request):
     return render(request, "maec/pix.html")
 def boleto(request):
     return render(request, "maec/boleto.html")
-def cartao(request):
-    return render(request, "maec/cartao.html")
+def oi(request):
+    return render(request, "maec/oi.html")
 def conta(request):
     return render(request, "maec/conta.html")
 def funcionario(request):
@@ -29,13 +29,9 @@ def tabela_m(request):
     return render(request, "maec/tabela_maes.html")
 def tabela_p(request):
     return render(request, "maec/tabela_pro.html")
-def forms_fun(request):
-    return render(request, "maec/forms_fun.html")
 def forms_mae(request):
     return render(request, "maec/forms_mae.html")
 def eventos(request):
     return render(request, "maec/eventos.html")
-def login(request):
-    return render(request, "maec/login.html")
-def cadastre_se(request):
-    return render(request, "maec/cadastre_se.html")
+def mae(request):
+    return render(request, "maec/mae_perfil.html")

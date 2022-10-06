@@ -1,13 +1,14 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  {% block title %}Apoiador{% endblock %}</title>
-    <link rel="shortcut icon" href="{%static 'template1/images/logo/mini_logo.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mães Carentes</title>
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="{%static 'template1//images/logo/mini_logo.png' %}">
     <!-- Retina iPad Touch Icon-->
     <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
     <!-- Retina iPhone Touch Icon-->
@@ -28,31 +29,62 @@
     <link href="{% static 'template1/css/lib/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'template1/css/lib/helper.css' %}" rel="stylesheet">
     <link href="{% static 'template1/css/style.css' %}" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
 </head>
-<body> 
-    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures" >
+
+<body>
+
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
         <div class="nano">
-            <div class="nano-content" >
+            <div class="nano-content">
                 <ul>
                     <div class="logo"><a href="{% url 'url_apoiador' %}">
-                    <img class="logo" src="{%static 'template1/images/logo/logo.png' %}" alt="" /><span>Mães Carentes</span></a></div>
-                    <li><a href="{% url 'url_editar_ap' %}"><i ></i> Editar Perfil </a></li>
-                    <li><a href="{% url 'url_doar' %}"><i ></i> Doar Dinheiro </a></li>
-                    <li><a href="{% url 'url_doar_produto' %}"><i ></i> Doar Produtos</a></li>
-                    <li><a href="{% url 'url_inicio' %}"><i ></i> Sair</a></li>
+                    <img class="logo "src="{%static 'template1/images/logo/logo.png' %}" alt="" /><span style="font-family: 'Mogra', cursive;">Mães Carentes</span></a></div>
+                   
+                            <li><a href="{% url 'url_doar' %}"><i class="ti-heart"></i>Doar Dinheiro</a></li>
+                            <li><a href="{% url 'url_doar_produto' %}"><i class="ti-heart"></i>Doar Produtos</a></li>
+                            <li><a  href="{% url 'url_inicio' %}"><i class="ti-close"></i> Sair</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    <!-- /# sidebar -->
+
     <div class="header">
-        <div class="container-fluid ">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="float-left">
-                    </div>         
+                        <div class="hamburger sidebar-toggle">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="float-right">
+                        
+                       
                         <div class="dropdown dib">
                             <div class="header-icon" data-toggle="dropdown">
-                                <span class="user-avatar">Nome do usuário </span>   
+                                <span class="user-avatar">#Nome do usuário
+                                    <i class="ti-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                   
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="{% url 'url_editar_ap' %}">
+                                                    <i class="ti-settings"></i>
+                                                    <span>Configurações</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -60,39 +92,74 @@
             </div>
         </div>
     </div>
-      {% block conteudo%} 
-      
-      {% endblock %}
 
-    
+    {% block conteudo%} 
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1  style="font-family: 'Mogra', cursive;">Olá, <span>Bem vindo</span></h1>
+                            </div>
+                        </div>
+                    </div>
 
-     <!-- jquery vendor -->
-     <script src="{% static 'js/lib/jquery.min.js' %}"></script>
-     <script src="{% static 'js/lib/jquery.nanoscroller.min.js' %}"></script>
-     <!-- nano scroller -->
-     <script src="{% static 'js/lib/menubar/sidebar.js' %}"></script>
-     <script src="{% static 'js/lib/preloader/pace.min.js' %}"></script>
-     <!-- sidebar -->
- 
-     <script src="{% static 'js/lib/bootstrap.min.js' %}"></script>
-     <script src="{% static 'js/scripts.js' %}"></script>
-     <!-- bootstrap -->
- 
-     <script src="{% static 'js/lib/calendar-2/moment.latest.min.js' %}"></script>
-     <script src="{% static 'js/lib/calendar-2/pignose.calendar.min.js' %}"></script>
-     <script src="{% static 'js/lib/calendar-2/pignose.init.js' %}"></script>
- 
- 
-     <script src="{% static 'js/lib/weather/jquery.simpleWeather.min.js' %}"></script>
-     <script src="{% static 'js/lib/weather/weather-init.js' %}"></script>
-     <script src="{% static 'js/lib/circle-progress/circle-progress.min.js' %}"></script>
-     <script src="{% static 'js/lib/circle-progress/circle-progress-init.js' %}"></script>
-     <script src="{% static 'js/lib/chartist/chartist.min.js' %}"></script>
-     <script src="{% static 'js/lib/sparklinechart/jquery.sparkline.min.js' %}"></script>
-     <script src="{% static 'js/lib/sparklinechart/sparkline.init.js' %}"></script>
-     <script src="{% static 'js/lib/owl-carousel/owl.carousel.min.js' %}"></script>
-     <script src="{% static 'js/lib/owl-carousel/owl.carousel-init.js' %}"></script>
-     <!-- scripit init-->
-     <script src="{% static 'js/dashboard2.js' %}"></script>
+                </div>
+                <!-- /# row -->
+                <section id="main-content">
+                    
+                   
+                    <div class="row">
+                        <div class="container-fluid col-md-8 offset-md-3 my-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="year-calendar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endblock %}
+                </section> <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer">
+                                <p>2022 © Mães Carentes</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery vendor -->
+    <script src="{% static 'template1/js/lib/jquery.min.js' %}"></script>
+    <script src="{% static 'template1/js/lib/jquery.nanoscroller.min.js' %}"></script>
+    <!-- nano scroller -->
+    <script src="{% static 'template1/js/lib/menubar/sidebar.js' %}"></script>
+    <script src="{% static 'template1/js/lib/preloader/pace.min.js' %}"></script>
+    <!-- sidebar -->
+
+    <script src="{% static 'template1/js/lib/bootstrap.min.js' %}"></script>
+    <script src="{% static 'template1/js/scripts.js' %}"></script>
+    <!-- bootstrap -->
+
+    <script src="{% static 'template1/js/lib/calendar-2/moment.latest.min.js' %}"></script>
+    <script src="{% static 'template1/js/lib/calendar-2/pignose.calendar.min.js' %}"></script>
+    <script src="{% static 'template1/js/lib/calendar-2/pignose.init.js' %}"></script>
+
+
+    <script src="{% static 'template1/js/lib/weather/jquery.simpleWeather.min.js' %}"></script>
+    <script src="{% static 'template1/js/lib/weather/weather-init.js' %}"></script>
+    <script src="{% static 'template1/js/lib/circle-progress/circle-progress.min.js' %}"></script>
+    <script src="{% static 'template1/js/lib/circle-progress/circle-progress-init.js' %}"></script>
+    <script src="{% static 'template1/js/lib/chartist/chartist.min.js' %}"></script>
+    <script src="{% static 'template1/js/lib/sparklinechart/jquery.sparkline.min.js' %}"></script>
+    <script src="{% static 'template1/js/lib/sparklinechart/sparkline.init.js' %}"></script>
+    <script src="{% static 'template1/js/lib/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'template1/js/lib/owl-carousel/owl.carousel-init.js' %}"></script>
+    <!-- scripit init-->
+    <script src="{% static 'template1/js/dashboard2.js' %}"></script>
 </body>
+
 </html>
+

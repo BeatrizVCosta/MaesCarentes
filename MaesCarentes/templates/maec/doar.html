@@ -2,6 +2,7 @@
 {%block title%}Doar{% endblock %}
 {% block conteudo %}
 {% load static%}
+
 <div class="content-wrap">
     <div class="main">
         <div class="container-fluid  col-md-12 offset-md-3 my-3">
@@ -15,32 +16,25 @@
             </div>
                 <section id="main-content">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-8">
                             <div class="card">
                                 <div class="text-center mb-4">
-                                    <h4>Doar</h4>                                   
+                                    <h4 style="font-family: 'Mogra', cursive;">Doar</h4>                                   
                                 </div>
                                 <div class="card-body">
                                     
-                                        <a class="btn btn-pink btn-block"  href="{% url 'url_pix' %}">Pix</a>
-                                        <a class="btn btn-pink btn-block"  href="{% url 'url_boleto' %}">Boleto</a>
-                                        <a  class="btn btn-pink btn-block" href="{% url 'url_conta' %}">Conta para depósito</a>
+                                        <a class="btn btn-pink btn-block btn-rounded"  href="{% url 'url_pix' %}">Pix</a>
+                                        <a class="btn btn-pink btn-block btn-rounded"  href="{% url 'url_boleto' %}">Boleto</a>
+                                        <a  class="btn btn-pink btn-block btn-rounded" href="{% url 'url_conta' %}">Conta para depósito</a>
                                 </div>
                                 </div>  
                             </div>
                         </div>
                     </div>
                 </section>
+                {% block doar %}
+                {% endblock%}
         </div>
     </div>
 </div>
-{% block doar %}
-{% endblock%}
-
-<script src="{% static 'template1/js/lib/jquery.min.js' %}"></script>
-<script src="{% static 'template1/js/lib/jquery.nanoscroller.min.js' %}"></script>
-<!-- nano scroller -->
-<script src="{% static 'template1/js/lib/menubar/sidebar.js' %}"></script>
-<script src="{% static 'template1/js/lib/preloader/pace.min.js' %}"></script>
-<script src="{% static 'template1/js/lib/bootstrap.min.js' %}"></script><script src="js/scripts.js"></script>
 {% endblock %}

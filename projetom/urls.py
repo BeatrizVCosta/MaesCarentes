@@ -29,17 +29,14 @@ urlpatterns = [
     path('ver_maes/', tabela_m, name="url_ver_maes"),
      path('eventos/', eventos, name="url_eventos"),
     path('produtos_disponiveis/', tabela_p, name="url_produtos_disponiveis"),
-    path('cadastrar_funcionario/', forms_fun, name="url_cadastrar_funcionario"),
     path('cadastrar_mae/', forms_mae, name="url_cadastrar_mae"),
-    path('login/', login, name="url_login"),
-    path('cadastre_se/', cadastre_se, name="url_cadastre_se"),
     path('editar_ap/', editar_ap, name="url_editar_ap"),
     path('doar_produto/', forms_pro, name="url_doar_produto"),
     path('doar/', doar, name="url_doar"),
     path('pix/', pix, name="url_pix"),
     path('boleto/', boleto, name="url_boleto"),
-    path('cartao/', cartao, name="url_cartao"),
     path('conta/', conta, name="url_conta"),
-   
+    path('oi/', oi, name="url_oi"),
+    path('mae/', mae, name="url_Mperfil"),
 
 ]

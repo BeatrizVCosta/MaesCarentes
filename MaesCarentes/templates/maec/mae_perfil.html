@@ -1,0 +1,36 @@
+{% extends 'maec/funcionario.html' %}
+{%block title%}Ver Mães{% endblock %}
+{% block conteudo %}
+
+<div class="content-wrap">
+    <div class="main">
+        <div class="container-fluid  col-md-16 offset-md-3 my-3">
+            <div class="row">
+                <div class="col-lg-8 p-r-0 title-margin-right">
+                    <div class="page-header">  
+                    </div>
+                </div>
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                              <h3 style="font-family: 'Mogra', cursive;" class="card-title">#Nome da mãe</h4>
+                            </div>
+                              <div class="card-body">
+                                 <h6 >Nome: Fulaninha da Silva</h5>
+                                 <h6 >Cpf: 123456789 </h5>
+                            </div>
+                           
+                            <div>
+                            <a class="btn btn-pink  btn-rounded" href="{% url 'url_cadastrar_evento' %}"> Adicionar Evento</a>
+                            </div>
+                            <div>
+                            <a class="btn btn-pink  btn-rounded" href="#"> Editar Informações</a>
+                           </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
