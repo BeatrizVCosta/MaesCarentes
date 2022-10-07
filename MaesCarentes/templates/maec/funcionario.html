@@ -32,11 +32,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
+<body style="background-color: #F8E48E;">
 
     <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
         <div class="nano">
@@ -45,18 +45,19 @@
                     <div class="logo"><a href="{% url 'url_funcionario' %}">
                     <img class="logo "src="{%static 'template1/images/logo/logo.png' %}" alt="" /><span style="font-family: 'Mogra', cursive;">Mães Carentes</span></a></div>
                    
-                    <li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> Mães<span
+                    <li><a class="sidebar-sub-toggle"><i class="ti-list"></i> Mães<span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="{% url 'url_ver_maes' %}">Ver Mães Cadastradas</a></li>
-                            <li><a href="{% url 'url_cadastrar_mae' %}">Cadastrar Nova Mãe</a></li>
-                            <li><a href="{% url 'url_cadastrar_evento' %}">Cadastrar Eventos</a></li>
+                            <li><a href="{% url 'url_ver_maes' %}"><i class="ti-list"></i>Ver Mães Cadastradas</a></li>
+                            <li><a href="{% url 'url_cadastrar_mae' %}"><i class="fa fa-pencil"></i>Cadastrar Nova Mãe</a></li>
+                            <li><a href="{% url 'url_cadastrar_evento' %}"><i class="fa fa-pencil"></i>Cadastrar Eventos</a></li>
                         </ul>
                     </li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> Doações <span
+                    <li><a class="sidebar-sub-toggle"><i class="ti-list"></i> Doações <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="{% url 'url_produtos_disponiveis' %}">Ver Produtos Disponíveis</a></li>
+                            <li><a href="{% url 'url_doacoes' %}"><i class="ti-list"></i>Ver Doações Recebidas</a></li>
+                            <li><a href="{% url 'url_produtos_disponiveis' %}"><i class="ti-list"></i>Ver Produtos Disponíveis</a></li>
                            
                         </ul>
                     </li>
@@ -67,6 +68,8 @@
         </div>
     </div>
     <!-- /# sidebar -->
+
+     
 
     <div class="header">
         <div class="container-fluid">

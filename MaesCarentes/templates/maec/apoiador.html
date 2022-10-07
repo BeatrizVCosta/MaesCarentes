@@ -32,10 +32,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    
 </head>
 
-<body>
+<body style="background-color: #DDB4CA;">
 
     <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
         <div class="nano">
@@ -44,8 +45,8 @@
                     <div class="logo"><a href="{% url 'url_apoiador' %}">
                     <img class="logo "src="{%static 'template1/images/logo/logo.png' %}" alt="" /><span style="font-family: 'Mogra', cursive;">Mães Carentes</span></a></div>
                    
-                            <li><a href="{% url 'url_doar' %}"><i class="ti-heart"></i>Doar Dinheiro</a></li>
-                            <li><a href="{% url 'url_doar_produto' %}"><i class="ti-heart"></i>Doar Produtos</a></li>
+                            <li><a href="{% url 'url_doar' %}"><i class="ti-money"></i>Doar Dinheiro</a></li>
+                            <li><a href="{% url 'url_doar_produto' %}"><i class="ti-check"></i>Doar Produtos</a></li>
                             <li><a  href="{% url 'url_inicio' %}"><i class="ti-close"></i> Sair</a></li>
                 </ul>
             </div>
@@ -73,13 +74,11 @@
                                     <i class="ti-angle-down f-s-10"></i>
                                 </span>
                                 <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
-                                   
                                     <div class="dropdown-content-body">
                                         <ul>
                                             <li>
-                                                <a href="{% url 'url_editar_ap' %}">
-                                                    <i class="ti-settings"></i>
-                                                    <span>Configurações</span>
+                                                <a href="{% url 'url_editar_ap' %}"> <i class="ti-settings"></i>
+                                                    Configurações
                                                 </a>
                                             </li>
                                         </ul>
@@ -100,9 +99,9 @@
                 <div class="row">
                     <div class="col-lg-8 p-r-0 title-margin-right">
                         <div class="page-header">
-                            <div class="page-title">
-                                <h1  style="font-family: 'Mogra', cursive;">Olá, <span>Bem vindo</span></h1>
-                                <p>Melhore o dia de alguém, faça uma doação<i class="ti-heart"></i></p>
+                            <div class="page-title" >
+                                <h1  style="font-family: 'Mogra', cursive;" >Olá, <span>Bem vindo</span></h1>
+                                <p >Melhore o dia de alguém, faça uma doação<i class="ti-heart"></i></p>
                             </div>
                         </div>
                     </div>

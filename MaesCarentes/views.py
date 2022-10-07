@@ -35,3 +35,5 @@ def eventos(request):
     return render(request, "maec/eventos.html")
 def mae(request):
     return render(request, "maec/mae_perfil.html")
+def doacoes(request):
+    return render(request, "maec/doacoes.html")

@@ -27,7 +27,7 @@ urlpatterns = [
     path('cadastrar_evento/', forms_evento, name="url_cadastrar_evento"),
     path('editar/', editar, name="url_editar"),
     path('ver_maes/', tabela_m, name="url_ver_maes"),
-     path('eventos/', eventos, name="url_eventos"),
+    path('eventos/', eventos, name="url_eventos"),
     path('produtos_disponiveis/', tabela_p, name="url_produtos_disponiveis"),
     path('cadastrar_mae/', forms_mae, name="url_cadastrar_mae"),
     path('editar_ap/', editar_ap, name="url_editar_ap"),
@@ -38,5 +38,6 @@ urlpatterns = [
     path('conta/', conta, name="url_conta"),
     path('oi/', oi, name="url_oi"),
     path('mae/', mae, name="url_Mperfil"),
+    path('doacoes/', doacoes, name="url_doacoes"),
 
 ]
