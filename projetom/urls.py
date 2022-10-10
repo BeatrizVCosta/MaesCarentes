@@ -39,5 +39,7 @@ urlpatterns = [
     path('oi/', oi, name="url_oi"),
     path('mae/', mae, name="url_Mperfil"),
     path('doacoes/', doacoes, name="url_doacoes"),
+    path('doacoes_confirmadas/', d_conf, name="url_d_conf"),
+
 
 ]
